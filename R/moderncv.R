@@ -36,14 +36,14 @@ moderncv_cv_entries <- new_entry_formats(
     paste(
       c(
         "\\nopagebreak",
-        glue_alt("\t\\cvitem{<<when>>}{<<what>>. <<with>>}")
+        glue_alt("\t\\cvitem{<<when>>}{<<what>> <<with>>}")
       ),
       collapse = "\n"
     )
   },
   detailed = function(what, when, with, where, why){
     why <- lapply(why, function(x) {
-      if(length(x) == 0) return("\\empty")
+      if(length(x) == 0) return("")
       paste(c(
         "\\begin{itemize}%",
         paste0("\\item ", x, "%"),

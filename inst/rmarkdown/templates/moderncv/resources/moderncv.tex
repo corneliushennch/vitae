@@ -12,11 +12,11 @@
 \documentclass[$if(fontsize)$$fontsize$$else$11pt$endif$,$if(lang)$$babel-lang$,$endif$$if(papersize)$$papersize$$else$a4paper$endif$,$for(classoption)$$classoption$$sep$,$endfor$]{moderncv}
 
 % moderncv themes
-\moderncvstyle{$theme$}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvstyle{$theme$}           % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
 
 \definecolor{color0}{rgb}{0,0,0}% black
 \definecolor{color1}{HTML}{$if(headcolor)$$headcolor$$else$3873B3$endif$}% custom
-\definecolor{color2}{rgb}{0.45,0.45,0.45}% dark grey
+\definecolor{color2}{HTML}{$if(color2)$$color2$$else$2d2d2d$endif$}% custom or dark grey
 
 $if(fontfamily)$
 \usepackage[$for(fontfamilyoptions)$$fontfamilyoptions$$sep$,$endfor$]{$fontfamily$}
@@ -41,7 +41,7 @@ $if(geometry)$
 $else$
 \usepackage[scale=0.75,footskip=60pt]{geometry}
 $endif$
-%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+\setlength{\hintscolumnwidth}{100pt}                % if you want to change the width of the column with the dates
 %\setlength{\makecvheadnamewidth}{10cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
 $if(highlighting-macros)$
@@ -64,7 +64,7 @@ $if(twitter)$\social[twitter]{$twitter$}$endif$
 $if(github)$\social[github]{$github$}$endif$
 % \extrainfo{additional information}                 % optional, remove / comment the line if not wanted
 
-$if(profilepic)$\photo[70pt][0.4pt]{$profilepic$}$endif$
+$if(profilepic)$\photo[100pt][0pt]{$profilepic$}$endif$
 
 $if(aboutme)$
 \quote{$aboutme$}
